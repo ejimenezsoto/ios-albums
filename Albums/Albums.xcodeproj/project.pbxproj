@@ -52,7 +52,6 @@
 		79C275CC2464965A005B4416 = {
 			isa = PBXGroup;
 			children = (
-				79C275FD2464B3B6005B4416 /* NetworkHelper.swift */,
 				79C275D72464965A005B4416 /* Albums */,
 				79C275D62464965A005B4416 /* Products */,
 				79C275EC24649668005B4416 /* Resources */,
@@ -84,6 +83,7 @@
 			children = (
 				79C275D82464965A005B4416 /* AppDelegate.swift */,
 				79C275DA2464965A005B4416 /* SceneDelegate.swift */,
+				79C275FD2464B3B6005B4416 /* NetworkHelper.swift */,
 				79C275E12464965C005B4416 /* Assets.xcassets */,
 				79C275E62464965C005B4416 /* Info.plist */,
 			);

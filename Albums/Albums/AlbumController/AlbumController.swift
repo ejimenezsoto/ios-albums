@@ -16,7 +16,7 @@ class AlbumController {
     private var testJSONurl: URL? {
         return Bundle.main.url(forResource: "exampleAlbum", withExtension: "json")
     }
-    private let baseURL = URL(string: "")!
+    private let baseURL = URL(string: "https://albums-c1277.firebaseio.com/")!
     
     var albums: [Album] = []
     
@@ -55,11 +55,12 @@ class AlbumController {
     // MARK: - Netorking
     
     func fetchAlbums(completion: @escaping CompletionHandler = { _ in }) {
-        let requestURL = baseURL.appendingPathExtension("json")
+        let requestURL = baseURL.appendingPathExtension(//NEED TO FILL
+            "")
         
         URLSession.shared.dataTask(with: requestURL) { (data, _, error) in
             if let error = error {
-                NSLog("Error GETting albums: \(error)")
+                NSLog("Error Getting albums: \(error)")
                 completion(error)
                 return
             }
@@ -97,7 +98,7 @@ class AlbumController {
         
         URLSession.shared.dataTask(with: request) { (_, _, error) in
             if let error = error {
-                NSLog("Error PUTting album to server: \(error)")
+                NSLog("Error Putting album to server: \(error)")
             }
         }.resume()
     }
